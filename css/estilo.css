@@ -153,3 +153,31 @@ footer{
     display:flex;
     align-items: center;
 }
+
+/* Midia queries */
+
+@media screen and (min-width:600px){
+    .icone{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .menu a {
+        padding:0 1rem;
+    }
+}
+
+@media screen and (min-width: 800px){
+    html{
+        font-size: 18px;
+    }
+    header .limitador{
+        height: 15vh;
+    }
+    .destaque{
+        height: 85vh;
+    }
+}
