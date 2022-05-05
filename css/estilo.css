@@ -144,3 +144,12 @@ iframe{
 .historia iframe{
     max-width: 800px;
 }
+footer{
+    background-color: black;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    height: 14vh;
+    display:flex;
+    align-items: center;
+}
