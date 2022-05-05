@@ -88,3 +88,59 @@ h2 a{
     right: 0;
     left: 0;
 }
+/* Section com a class destaque */
+.destaque{
+    background-image: url(../imagens/fundo-destaque.jpg);
+    height:90vh;
+    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.destaque h2{
+    font-size: clamp(2rem, 8vw, 7rem); /* clamp(min,ideal,max)*/
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+.destaque p{
+    font-size: clamp(1.6rem, 2vw, 4rem); /* clamp(min,ideal,max)*/
+    animation: fadeIn 1.5s 1s backwards;
+}
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.front-end, .localizacao{
+    text-align: center;
+}
+section h2{
+    padding: 1rem;
+}
+section p {
+    padding: 0.5rem 0;
+}
+figure{
+    text-align: center;
+    margin: 1rem 0;
+}
+.historia{
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.historia h2{
+    color: #fff;
+    text-shadow: black 1px 1px 2px ;
+}
+iframe{
+    width: 100%;
+    border: none;
+}
+.historia iframe{
+    max-width: 800px;
+}
