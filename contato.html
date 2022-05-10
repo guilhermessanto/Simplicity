@@ -284,5 +284,25 @@
             });
         });
 </script>
+
+
+<!-- Contador de caracteres -->
+<script>
+ const spanMaximo = $("#maximo");
+ const bCaracteres = $("#caracteres");
+ const textMensagem = $("#mensagem");
+//determinando quantidade de caracteres
+ let qtd = 100;
+//Ouvinte de evento
+ textMensagem.on("input",function(){
+    let conteudo = textMensagem.val();
+    let contagem = qtd - conteudo.length;
+    console.log(contagem)
+ });
+ 
+
+</script>
+
+
 </body>
 </html>
