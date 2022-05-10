@@ -151,8 +151,35 @@
     <footer>
         <p>Simplicity é um site fictício desenvolvido no Senac Penha &copy; - Alguns Direitos Reservados - 2022</p>
     </footer>
+    <!-- menu responsivo -->
     <script src="js/menu.js"></script>
+
+    <!-- Vanilla masker para o formulario  -->
     <script src="plugins/vanilla-masker.min.js"></script>
+    <script>
+        VMasker(document.querySelector("#telefone")).maskPattern("(99) 9999-99999");
+        VMasker(document.querySelector("#cep")).maskPattern("99999-999");
+        function inputHandler(masks, max, event) {
+            var c = event.target;
+            var v = c.value.replace(/\D/g, '');
+            var m = c.value.length > max ? 1 : 0;
+            VMasker(c).unMask();
+            VMasker(c).maskPattern(masks[m]);
+            c.value = VMasker.toPattern(v, masks[m]);
+            }
+
+            var telMask = ['(99) 9999-99999', '(99) 99999-9999'];
+            var tel = document.querySelector('#telefone');
+            VMasker(tel).maskPattern(telMask[0]);
+            tel.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
+
+            var docMask = ['999.999.999-999', '99.999.999/9999-99'];
+            var doc = document.querySelector('#documento');
+            VMasker(doc).maskPattern(docMask[0]);
+            doc.addEventListener('input', inputHandler.bind(undefined, docMask, 14), false);
+    </script>
+    <!-- fim vanilla -->
+
 
     <!-- FORMSPREE JS -->
     <script>
@@ -187,5 +214,8 @@
         }
         form.addEventListener("submit", handleSubmit)
     </script>
+
+    <!-- VIACEP -->
+    <script src="plugins/jquery-3.6.0.min.js"></script>
 </body>
 </html>
