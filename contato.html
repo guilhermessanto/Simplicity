@@ -298,6 +298,13 @@
     let conteudo = textMensagem.val();
     let contagem = qtd - conteudo.length;
     bCaracteres.text(contagem);
+    if(contagem == 0){
+        spanMaximo.css('color','red');
+        spanMaximo.text("Limite de caracteres alcançado");
+    }else{
+        spanMaximo.css('color','black');
+        spanMaximo.html("(restam <b id=caracteres>"+contagem+"</b> caracteres)");
+    };
  });
  
 
