@@ -36,6 +36,7 @@ header{
     background-color: white;
     position: sticky;
     top: 0;
+    z-index: 9999;
 }
 header .limitador{
     display: flex;
@@ -56,6 +57,7 @@ header .limitador{
 }
 nav{
     width: 65%;
+
 }
 nav h2 {
     text-align: right;
